@@ -1,0 +1,23 @@
+.carouselContainer {
+    margin: auto;
+    margin-top: 5%;
+}
+
+.carouselItem {
+    border-radius: 10px;
+    border: 3px solid rgb(124, 122, 122);
+}
+
+.carouselItem img {
+    border-radius: 8px;
+}
+
+.exploreButton {
+    margin: 0% 45%;
+    width: 15rem;
+    transition: transform .3s;
+}
+
+.exploreButton:hover {
+    transform: scale(1.05);
+  }

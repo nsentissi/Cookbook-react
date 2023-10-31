@@ -1,8 +1,9 @@
-
 import { useState, useEffect } from 'react'
 import useContentful from './hooks/useContentful'
 
 import './App.css'
+import Navbar from './components/Navbar'
+import Carousel from './components/Carousel'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      {!recipes ? <p>Loading...</p> : recipes.map((recipe) => {
+      {/* {!recipes ? <p>Loading...</p> : recipes.map((recipe) => {
         return (
           <div className="card">
             <img src={recipe.img} alt={recipe.title} />
@@ -32,8 +33,9 @@ function App() {
             </div>
           </div>
         )
-      })}
-        
+      })} */}
+    <Navbar />
+    <Carousel />
     </>
   )
 }
