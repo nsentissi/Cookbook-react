@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 import useContentful from './hooks/useContentful'
 
@@ -5,37 +6,30 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Carousel from './components/Carousel'
 
+import './App.css'
+import Maindishes from './components/main-dishes'
+import Cocktails from './components/Cocktails'
+import Desserts from './components/desserts'
+
+
 function App() {
 
-  const {getRecipes} = useContentful()
-  const [recipes, setRecipes] = useState(null)
- 
-  useEffect(() => {
-    getRecipes().then((data) => {
-      setRecipes(data)
-      console.log(data);
-    }).catch((err) => {
-      console.log(err)
-    })
-  }, [])
+
 
   return (
+
     <>
-      {/* {!recipes ? <p>Loading...</p> : recipes.map((recipe) => {
-        return (
-          <div className="card">
-            <img src={recipe.img} alt={recipe.title} />
-            <div className="card-body">
-              <h5 className="card-title">{recipe.title}</h5>
-              <p className="card-text">{recipe.ingredients}</p>
-              <p className="card-text">{recipe.recipe}</p>
-              
-            </div>
-          </div>
-        )
-      })} */}
+      
     <Navbar />
     <Carousel />
+    
+
+    <div className='main'>
+     <Maindishes/>
+     <Cocktails/>
+     <Desserts/>
+        
+     </div>
     </>
   )
 }
