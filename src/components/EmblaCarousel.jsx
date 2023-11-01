@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
+import { Link } from "react-router-dom";
+
 import {
   DotButton,
   PrevButton,
   NextButton
 } from './EmblaCarouselArrowsDotsButtons'
+import urlByIndex from './urlByIndex'
 import imageByIndex from './imageByIndex'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -59,6 +62,8 @@ const EmblaCarousel = (props) => {
           <div className="embla__container">
             {slides.map((index) => (
               <div className="embla__slide" key={index}>
+                {console.log(index)}
+
                 <div className="embla__slide__number">
                   <span>{index + 1}</span>
                 </div>
@@ -68,7 +73,7 @@ const EmblaCarousel = (props) => {
                   alt="Your alt text"
                 />
             <Stack  className="exploreButton" spacing={2} direction="row">
-              <Button variant="contained">Explore</Button>
+              <Link to={urlByIndex(index)}><Button variant="contained">Explore</Button></Link>
             </Stack>
 
               </div>
@@ -82,7 +87,7 @@ const EmblaCarousel = (props) => {
         </div> */}
       </div>
 
-      <div className="embla__dots">
+      {/* <div className="embla__dots">
         {scrollSnaps.map((_, index) => (
           <DotButton
             key={index}
@@ -95,7 +100,7 @@ const EmblaCarousel = (props) => {
           />
 
         ))}
-      </div>
+      </div> */}
 
     </>
   )

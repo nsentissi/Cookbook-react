@@ -13,9 +13,58 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Routes, Route, NavLink } from "react-router-dom";
+
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Main Dishes', 'Deserts', 'Cocktails'];
+const navItems = [  
+            <NavLink 
+            to="/"
+            style={({ isActive }) => ({ 
+            color: isActive ? "white" : "white",
+            backgroundColor: isActive ? "#19a7d2" : "#1976D2",
+            borderRadius: isActive ? "5px" : "5px",
+            padding: isActive ? "2px 10px" : "10px",
+            textDecoration: isActive ? "none" : "none"
+
+              })}
+            >Home</NavLink>,
+            <NavLink 
+              to="/useContentfulMain"
+              style={({ isActive }) => ({ 
+                color: isActive ? "white" : "white",
+                backgroundColor: isActive ? "#19a7d2" : "#1976D2", 
+                borderRadius: isActive ? "5px" : "5px",
+                padding: isActive ? "2px 10px" : "10px",
+                textDecoration: isActive ? "none" : "none"
+
+                })}
+            >Main Dishes</NavLink>,
+            <NavLink 
+            to="/useContentfulDesserts"
+            style={({ isActive }) => ({ 
+              color: isActive ? "white" : "white",
+              backgroundColor: isActive ? "#19a7d2" : "#1976D2",
+              borderRadius: isActive ? "5px" : "5px",
+              padding: isActive ? "2px 10px" : "10px",
+              textDecoration: isActive ? "none" : "none"
+
+              })}
+          >Desserts</NavLink>,
+          <NavLink 
+          to="/useContentfulCocktails"
+          style={({ isActive }) => ({ 
+            color: isActive ? "white" : "white",
+            backgroundColor: isActive ? "#19a7d2" : "#1976D2",
+            borderRadius: isActive ? "5px" : "5px",
+            padding: isActive ? "2px 10px" : "10px",
+            textDecoration: isActive ? "none" : "none"
+
+            })}
+        >Cocktails</NavLink>,
+
+
+];
 
 function Navbar(props) {
   const { window } = props;
@@ -76,6 +125,8 @@ function Navbar(props) {
         </Toolbar>
       </AppBar>
     </Box>
+
+    
   );
 }
 
