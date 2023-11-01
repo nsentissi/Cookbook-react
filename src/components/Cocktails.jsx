@@ -15,11 +15,15 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import useContentful from '../hooks/useContentfulCocktails';
 import Loading from './Loading';
 
+
+
 const Cocktails = () => {
   const { getRecipes } = useContentful();
   const [recipes, setRecipes] = useState(null);
   const [expanded, setExpanded] = useState(false);
   const [liked, setLike] = useState (false)
+
+  
 
   useEffect(() => {
     getRecipes()
