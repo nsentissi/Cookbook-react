@@ -39,7 +39,7 @@ const RecipeCard = ({ recipe }) => {
           </IconButton>
         }
         title={recipe.title}
-        subheader="September 14, 2016"
+        /* subheader="September 14, 2016" */
       />
       <CardMedia
         component="img"
