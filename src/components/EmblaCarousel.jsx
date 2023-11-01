@@ -6,6 +6,10 @@ import {
   NextButton
 } from './EmblaCarouselArrowsDotsButtons'
 import imageByIndex from './imageByIndex'
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+
+
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props
@@ -63,7 +67,9 @@ const EmblaCarousel = (props) => {
                   src={imageByIndex(index)}
                   alt="Your alt text"
                 />
-                <button>Submit</button>
+            <Stack  className="exploreButton" spacing={2} direction="row">
+              <Button variant="contained">Explore</Button>
+            </Stack>
 
               </div>
             ))}

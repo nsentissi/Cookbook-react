@@ -15,7 +15,7 @@
   .embla__viewport:hover {
     transform: scale(1.05);
   }
-  
+
   .embla__container {
     backface-visibility: hidden;
     display: flex;
@@ -150,5 +150,10 @@
       var(--brand-primary),
       var(--brand-secondary)
     );
+  }
+
+  .exploreButton {
+    margin-left: 43%;
+    margin-top: 2%;
   }
   
