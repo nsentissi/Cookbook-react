@@ -1,8 +1,15 @@
 
 import { useState, useEffect } from 'react'
 import useContentful from './hooks/useContentful'
-
+import EmblaCarousel from './components/EmblaCarousel'
+import './css/base.css'
+import './css/sandbox.css'
+import './css/embla.css'
 import './App.css'
+
+const OPTIONS = { dragFree: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 function App() {
 
@@ -20,19 +27,9 @@ function App() {
 
   return (
     <>
-      {!recipes ? <p>Loading...</p> : recipes.map((recipe) => {
-        return (
-          <div className="card">
-            <img src={recipe.img} alt={recipe.title} />
-            <div className="card-body">
-              <h5 className="card-title">{recipe.title}</h5>
-              <p className="card-text">{recipe.ingredients}</p>
-              <p className="card-text">{recipe.recipe}</p>
-              
-            </div>
-          </div>
-        )
-      })}
+    <section className="sandbox__carousel">
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+    </section>
         
     </>
   )
