@@ -4,7 +4,7 @@ const useContentful = () => {
   
     const client = createClient({
         space: 'keoycf6woddh',
-        accessToken: 'M91RZKcrAHkgYoy7bnlkibSpIoyPQAC03-g1rkLFsHM',
+        accessToken: 'JmqtAqhaj3EFaiT5NVJjmdCvEtGPdkVlNY2_VcSC9P8',
         host: 'preview.contentful.com'
     });
 
@@ -12,7 +12,7 @@ const useContentful = () => {
         try{
             
             const entries = await client.getEntries({
-                content_type: 'cookbook',
+                content_type: 'cocktails',
                 select: 'fields'
             });
             console.log(entries)
