@@ -26,7 +26,7 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <Card sx={{ width: 600, marginBottom: 3 }}>
+    <Card className='test' sx={{ width: 600, marginBottom: 3 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -35,13 +35,12 @@ const RecipeCard = ({ recipe }) => {
         }
         action={
           <IconButton aria-label="settings">
-            <ExpandMoreIcon />
           </IconButton>
         }
-        title={recipe.title}
+        title={<span className='title'>{recipe.title}</span>}
         /* subheader="September 14, 2016" */
       />
-      <CardMedia
+      <CardMedia sx={{ height: 350}}
         component="img"
         height="350"
         image={recipe.img}
@@ -49,7 +48,7 @@ const RecipeCard = ({ recipe }) => {
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Ingredients : {recipe.ingredients}
+          <span className='ingredients'>Ingredients: </span> {recipe.ingredients}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -69,7 +68,7 @@ const RecipeCard = ({ recipe }) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Recipe:</Typography>
+          <Typography paragraph><span className='ingredients'>Recipe:</span></Typography>
           <Typography paragraph>{recipe.recipe}</Typography>
         </CardContent>
       </Collapse>

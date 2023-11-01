@@ -23,9 +23,11 @@ const Desserts = () => {
 
 
   return (
-    <div>
+    <div className='main'>
     {!recipes ? (
-      <Loading />
+              <div className="spinner">
+              <Loading />
+             </div>
     ) : (
       recipes.map((recipe) => <RecipeCard key={recipe.id} recipe={recipe} />)
     )}
