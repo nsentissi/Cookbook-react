@@ -136,7 +136,7 @@
   pre {
     font-family: SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier,
       monospace;
-    font-size: 1em;
+    font-size: 1eem;
   }
   small {
     font-size: 80%;
@@ -197,7 +197,7 @@
   }
   html {
     background-color: var(--background-site);
-    font-size: 62.5%;
+    font-size: 100%;
   }
   body {
     background-color: var(--background-site);

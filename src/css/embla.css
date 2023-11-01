@@ -6,10 +6,16 @@
   }
   .embla__viewport {
     overflow: hidden;
-    width: 200%;
-    margin-left: -50%;
-    margin-top: 5%;
+    width: 100%;
+    margin-top: 10%;
+    transition: transform .3s;
+
   }
+
+  .embla__viewport:hover {
+    transform: scale(1.05);
+  }
+  
   .embla__container {
     backface-visibility: hidden;
     display: flex;
@@ -23,10 +29,17 @@
   }
   .embla__slide__img {
     display: block;
-    height: 90rem;
-    object-fit: fill;
+    height: 40rem;
+    object-fit: cover;
     border: 3px solid black;
+    border-radius: 15px;
   }
+
+  .embla__slide__img:hover {
+    border: 3px solid #1976D2;
+    cursor: pointer;
+  }
+
   .embla__slide__number {
     width: 4.6rem;
     height: 4.6rem;

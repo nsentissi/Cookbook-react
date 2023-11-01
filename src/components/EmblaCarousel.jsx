@@ -63,6 +63,8 @@ const EmblaCarousel = (props) => {
                   src={imageByIndex(index)}
                   alt="Your alt text"
                 />
+                <button>Submit</button>
+
               </div>
             ))}
           </div>
@@ -81,10 +83,14 @@ const EmblaCarousel = (props) => {
             onClick={() => scrollTo(index)}
             className={'embla__dot'.concat(
               index === selectedIndex ? ' embla__dot--selected' : ''
+
             )}
+
           />
+
         ))}
       </div>
+
     </>
   )
 }
