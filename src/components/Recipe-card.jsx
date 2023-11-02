@@ -26,7 +26,7 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <Card className='test' sx={{ width: 600, marginBottom: 3 }}>
+    <Card className='cardContainer' sx={{ width: 600, marginBottom: 3 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">

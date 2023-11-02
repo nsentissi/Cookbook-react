@@ -4,6 +4,7 @@
     align-items: center;
     gap: 3rem;
     margin-top: 5%;
+   
 }
 
 .hourglassBackground {
@@ -478,9 +479,6 @@
     }
   }
 
-  .test {
-    box-shadow: 0px 0px 6px 12px #0000009d;
-  }
 
   .ingredients {
     font-weight: bolder;
@@ -492,4 +490,25 @@
 
   .spinner {
     margin-top: 10%;
+  }
+
+
+  .cardContainer {
+    border: 1.5px solid lightgrey;
+  }
+
+
+  body {
+    background-image: url(./assets/fresh-raw-garlic-ready-cook.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+  }
+
+
+  .logoImg {
+    height: 4rem;
+    width: 6rem;
   }

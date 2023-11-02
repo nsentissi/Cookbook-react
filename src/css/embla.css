@@ -31,12 +31,12 @@
     display: block;
     height: 40rem;
     object-fit: cover;
-    border: 3px solid black;
+    border: 1.5px solid black;
     border-radius: 15px;
   }
 
   .embla__slide__img:hover {
-    border: 3px solid #1976D2;
+    border: 1.5px solid #1976D2;
     cursor: pointer;
   }
 
