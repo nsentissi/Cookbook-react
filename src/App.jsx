@@ -18,26 +18,27 @@ function App() {
     <>
       <Navbar className="nav" />
 
-
       {/* <div className="main">
         <Maindishes />
         <Cocktails />
         <Desserts />
       </div> */}
 
-      
       <Routes>
-        <Route path="/" element={      <main className="sandbox">
-        <section className="sandbox__carousel">
-          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-        </section>
-      </main>}/>
-      <Route path="useContentfulMain" element={<Maindishes />}/>
-        <Route path="useContentfulDesserts" element={<Desserts />}/>
-        <Route path="useContentfulCocktails" element={<Cocktails />}/>
-
+        <Route
+          path="/"
+          element={
+            <main className="sandbox">
+              <section className="sandbox__carousel">
+                <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+              </section>
+            </main>
+          }
+        />
+        <Route path="useContentfulMain" element={<Maindishes />} />
+        <Route path="useContentfulDesserts" element={<Desserts />} />
+        <Route path="useContentfulCocktails" element={<Cocktails />} />
       </Routes>
-
     </>
   );
 }
