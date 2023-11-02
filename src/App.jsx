@@ -32,9 +32,9 @@ function App() {
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         </section>
       </main>}/>
-      <Route path="useContentfulMain" element={<Maindishes />}/>
-        <Route path="useContentfulDesserts" element={<Desserts />}/>
-        <Route path="useContentfulCocktails" element={<Cocktails />}/>
+      <Route path="Main-Dishes" element={<Maindishes />}/>
+        <Route path="Desserts" element={<Desserts />}/>
+        <Route path="Cocktails" element={<Cocktails />}/>
 
       </Routes>
 

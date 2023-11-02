@@ -30,7 +30,7 @@ const navItems = [
               })}
             >Home</NavLink>,
             <NavLink 
-              to="/useContentfulMain"
+              to="/Main-Dishes"
               style={({ isActive }) => ({ 
                 color: isActive ? "white" : "white",
                 backgroundColor: isActive ? "#19a7d2" : "#1976D2", 
@@ -41,7 +41,7 @@ const navItems = [
                 })}
             >Main Dishes</NavLink>,
             <NavLink 
-            to="/useContentfulDesserts"
+            to="/Desserts"
             style={({ isActive }) => ({ 
               color: isActive ? "white" : "white",
               backgroundColor: isActive ? "#19a7d2" : "#1976D2",
@@ -52,7 +52,7 @@ const navItems = [
               })}
           >Desserts</NavLink>,
           <NavLink 
-          to="/useContentfulCocktails"
+          to="/Cocktails"
           style={({ isActive }) => ({ 
             color: isActive ? "white" : "white",
             backgroundColor: isActive ? "#19a7d2" : "#1976D2",
