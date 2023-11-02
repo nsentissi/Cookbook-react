@@ -26,7 +26,7 @@ const RecipeCard = ({ recipe }) => {
   };
 
   return (
-    <Card className='cardContainer' sx={{ width: 600, marginBottom: 3 }}>
+    <Card className='cardContainer' sx={{ width: 800, marginBottom: 3 }}>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -42,12 +42,12 @@ const RecipeCard = ({ recipe }) => {
       />
       <CardMedia sx={{ height: 350}}
         component="img"
-        height="350"
+        height="150"
         image={recipe.img}
         alt={recipe.title}
       />
       <CardContent>
-        <Typography variant="body2" color="text.secondary">
+        <Typography sx={{ height: 100}} variant="body2" color="text.secondary">
           <span className='ingredients'>Ingredients: </span> {recipe.ingredients}
         </Typography>
       </CardContent>
