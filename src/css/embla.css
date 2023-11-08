@@ -31,7 +31,7 @@
     display: block;
     height: 40rem;
     object-fit: cover;
-    border: 1.5px solid black;
+    border: 2px solid rgb(180, 177, 177);
     border-radius: 15px;
   }
 
