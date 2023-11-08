@@ -22,12 +22,14 @@ const useContentful = () => {
                 const ingredients = entry.fields.ingredients
                 const recipe = entry.fields.recipe
                 const img = entry.fields.image.fields.file.url
+                const icon = entry.fields.icon.fields.file.url
 
                 return {
                     title,
                     ingredients,
                     recipe,
-                    img
+                    img,
+                    icon
                 }
             })
 

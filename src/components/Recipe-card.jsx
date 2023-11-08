@@ -5,10 +5,8 @@ import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -29,9 +27,7 @@ const RecipeCard = ({ recipe }) => {
     <Card className='cardContainer' sx={{ width: 800, marginBottom: 3 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
+          <img className='icon' src={recipe.icon}  />
         }
         action={
           <IconButton aria-label="settings">
@@ -55,9 +51,9 @@ const RecipeCard = ({ recipe }) => {
         <IconButton aria-label="add to favorites">
           <FavoriteIcon onClick={handleLike} style={liked ? { color: 'red' } : {}} />
         </IconButton>
-        <IconButton aria-label="share">
+        {/* <IconButton aria-label="share">
           <ShareIcon />
-        </IconButton>
+        </IconButton> */}
         <IconButton
           onClick={handleExpandClick}
           aria-expanded={expanded}
