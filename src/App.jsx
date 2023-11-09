@@ -1,41 +1,44 @@
+import EmblaCarousel from "./components/EmblaCarousel";
+import "./css/base.css";
+import "./css/sandbox.css";
+import "./css/embla.css";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Maindishes from "./components/main-dishes";
+import Cocktails from "./components/Cocktails";
+import Desserts from "./components/desserts";
+import { Routes, Route, Link } from "react-router-dom";
 
-import { useState, useEffect } from 'react'
-import useContentful from './hooks/useContentful'
-
-import './App.css'
+const OPTIONS = {};
+const SLIDE_COUNT = 3;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 function App() {
-
-  const {getRecipes} = useContentful()
-  const [recipes, setRecipes] = useState(null)
- 
-  useEffect(() => {
-    getRecipes().then((data) => {
-      setRecipes(data)
-      console.log(data);
-    }).catch((err) => {
-      console.log(err)
-    })
-  }, [])
-
   return (
     <>
-      {!recipes ? <p>Loading...</p> : recipes.map((recipe) => {
-        return (
-          <div className="card">
-            <img src={recipe.img} alt={recipe.title} />
-            <div className="card-body">
-              <h5 className="card-title">{recipe.title}</h5>
-              <p className="card-text">{recipe.ingredients}</p>
-              <p className="card-text">{recipe.recipe}</p>
-              
-            </div>
-          </div>
-        )
-      })}
+      <Navbar className="nav" />
+
+      {/* <div className="main">
+        <Maindishes />
+        <Cocktails />
+        <Desserts />
+      </div> */}
+
+      <Routes>
+      
         
+        <Route path="/" element={      <main className="sandbox">
+        <section className="sandbox__carousel">
+          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+        </section>
+      </main>}/>
+      <Route path="Main-Dishes" element={<Maindishes />}/>
+        <Route path="Desserts" element={<Desserts />}/>
+        <Route path="Cocktails" element={<Cocktails />}/>
+
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
